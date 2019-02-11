@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * _islower - Entry point
+ *
+ *@i : lowercase checj
  *
  * Return: (0) always
  */

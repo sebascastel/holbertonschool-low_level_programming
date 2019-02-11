@@ -1,20 +1,20 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet_x10 - Entry point
  *
  * Return: (0) always
  */
 
 void print_alphabet_x10(void)
 {
-        int i,j;
+	int i, j;
 
-        for(i = 0; i<10; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for(j = 97; j<=122; j++)
+		for (j = 97; j <= 122; j++)
 		{
 			_putchar(j);
 		}
-                _putchar(10);
+	_putchar(10);
 	}
 }

@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * _abs - Entry point
  *
+ *@i: check abs
  * Return: (0) always
  */
 
