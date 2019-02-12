@@ -10,3 +10,8 @@ void jack_bauer(void);
 void times_table(void);
 int add(int, int);
 void print_to_98(int n);
+void print_over_98(int n);
+void print_under_98(int n);
+void print_times_table(int);
+void print_digits(int, int);
+void print_spaces(int, int);
