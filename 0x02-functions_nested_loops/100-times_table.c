@@ -1,48 +1,92 @@
 #include "holberton.h"
 /**
- * print_times_table - Entry point
- *@n: check
+ * print_digits - Entry point
+ *@a: check
+ *@b: check
  * Return: (0) always
  */
 
+void print_digits(int a, int b)
+{
+	if ((a * b) > 99)
+	{
+		_putchar(((a * b) / 100) + '0');
+		_putchar((((a * b) / 10) % 10) + '0');
+		_putchar(((a * b) % 10) + '0');
+	}
+	else if (((a * b) < 100) && ((a * b) > 9))
+	{
+		_putchar(((a * b) / 10) + '0');
+		_putchar(((a * b) % 10) + '0');
+	}
+	else
+	{
+		_putchar(((a * b) % 10) + '0');
+	}
+
+}
+/**
+ * print_spaces - helper function, prints out number of spaces based on x * y
+ * @m: rows
+ * @n: column
+ * Return: void
+ */
+void print_spaces(int m, int n)
+{
+
+	if ((m * n) >= 100)
+	{
+		_putchar(' ');
+	}
+	else if ((m * n) < 100 && (m * n) > 9)
+	{
+		_putchar(' ');
+		_putchar(' ');
+	}
+	else if ((m * n) < 10)
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
+	}
+
+}
+
+/**
+ * print_times_table - prints multiplication tables between 1 and 15
+ * @n: multiplication
+ * Return: void
+ */
 void print_times_table(int n)
 {
-	int i, j, k;
 
-	if (n > 0 && n < 15)
+	int x, y;
+
+	if (n < 0 || n > 15)
+		return;
+
+	x = 0;
+
+	while (x <= n)
 	{
-		for (j = 0; j <= n; j++)
+		y = 0;
+
+		while (y <= n)
 		{
-			_putchar('0');
-			for (i = 1; i <= n; i++)
+			print_digits(x, y);
+
+			if (y != n)
+				_putchar(',');
+			else
 			{
-				k = i * j;
-				if (k > 9 && k <= 99)
-				{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(k / 10 + '0');
-				_putchar(k % 10 + '0');
-				}
-				else if (k < 10)
-				{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(k + '0');
-				}
-				else
-				{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(k / 100 + '0');
-				_putchar(k / 10 % 10 + '0');
-				_putchar(k % 10 + '0');
-				}
+				_putchar('\n');
+				break;
 			}
-			_putchar('\n');
+			++y;
+
+			print_spaces(x, y);
 		}
+		++x;
 	}
+
 }
