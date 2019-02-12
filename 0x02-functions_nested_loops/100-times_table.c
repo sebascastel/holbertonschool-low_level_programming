@@ -16,24 +16,24 @@ void print_times_table(int n)
 		{
 			num = r * c;
 			tens = num / 10;
-			if (tens > 9) /* makes sure tens is a single digit ex. 123/10=12%10=2*/
+			if (tens > 9)
 				tens = tens % 10;
-			if (c == 0) /*Print the first coloum*/
+			if (c == 0)
 				_putchar('0');
 			else if (tens == 0 && (num / 100) == 0)
-			{/*print only single digits and so 101 work*/
+			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar((num % 10) + '0');
 			}
-			else if ((num / 100) == 0) /*Print double digits*/
+			else if ((num / 100) == 0)
 			{
 				_putchar(' ');
 				_putchar(tens + '0');
 				_putchar((num % 10) + '0');
 
 			}
-			else /*print everything else*/
+			else
 			{
 				_putchar((num / 100) + '0');
 				_putchar(tens + '0');
