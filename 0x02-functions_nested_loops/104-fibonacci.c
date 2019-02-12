@@ -7,41 +7,41 @@
 
 int main(void)
 {
-	long int i, f, s, n, h2, h1, h3, h4, h0, h5;
+	int n;
+	long int fib1, fib2, ffib1, bfib1, ffib2, bfib2;
 
-	f = 0;
-	s = 1;
-	i = 0;
-	while (i < 91)
+	fib1 = 1;
+	fib2 = 2;
+	for (n = 0; n < 48; n++)
 	{
-		n = f + s;
-		f = s;
-		s = n;
-		printf("%ld", n);
-		printf(",");
-		printf(" ");
-		i++;
-	}
-
-	h4 = f / 1000000000;
-	h3 = f % 1000000000;
-	h2 = s / 1000000000;
-	h1 = s % 1000000000;
-	while (i < 97)
-	{
-		h0 = h4 + h2;
-		h5 = h3 + h1;
-		printf("%ld""%ld", h0, h5);
-		if (i != 96)
+		if (n < 44)
 		{
-			printf(",");
-			printf(" ");
+			printf("%lu, %lu", fib1, fib2);
+			fib1 += fib2;
+			fib2 += fib1;
+			if (n == 43)
+			{
+			ffib1 = fib1 / 1000000000000000;
+			bfib1 = fib1 % 1000000000000000;
+			ffib2 = fib2 / 1000000000000000;
+			bfib2 = fib2 % 1000000000000000;
+			printf(", %ld0%ld, %ld0%ld", ffib1, bfib1, ffib2, bfib2);
+			}
+
 		}
-		h4 = h2;
-		h3 = h1;
-		h2 = h0;
-		h1 = h5;
-		i++;
+		else
+		{
+			bfib1 += bfib2;
+			ffib1 = ffib1 + ffib2 + (bfib1 / 1000000000000000);
+			bfib1 = bfib1 % 1000000000000000;
+			bfib2 += bfib1;
+			ffib2 = ffib1 + ffib2 + (bfib2 / 1000000000000000);
+			bfib2 = bfib2 % 1000000000000000;
+			printf("%ld%ld, %ld%ld", ffib1, bfib1, ffib2, bfib2);
+		}
+		if (n != 47)
+			printf(", ");
+
 	}
 	printf("\n");
 	return (0);
