@@ -7,26 +7,24 @@
 
 int main(void)
 {
-	long first;
-	long second;
-	long sum;
-	long total_sum;
-	int r;
+	int n;
+	unsigned long fib1, fib2, sum;
 
-	first = 0;
-	second = 1;
-	sum = first + second;
-	while (sum < 3999999)
+	fib1 = 1;
+	fib2 = 2;
+	for (n = 0; fib2 < 4000000; n++)
 	{
-		r = sum % 2;
-		sum = first + second;
-		if (r == 0)
+		if (fib1 % 2 == 0)
 		{
-			total_sum += sum;
+			sum += fib1;
 		}
-		first = second;
-		second = sum;
+		if (fib2 % 2 == 0)
+		{
+			sum += fib2;
+		}
+		fib1 += fib2;
+		fib2 += fib1;
 	}
-	printf("%lu\n", total_sum);
+	printf("%lu\n", sum);
 	return (0);
 }
