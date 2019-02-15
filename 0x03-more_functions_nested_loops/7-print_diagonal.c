@@ -1,12 +1,16 @@
 #include "holberton.h"
 /**
- * print_line - check the code for Holberton School students.
+ * print_diagonal - check the code for Holberton School students.
  * @n : check
+ * @i : check
+ * @j : chack
  * Return: Always 0.
  */
 void print_diagonal(int n)
+
 {
-	int i, j;
+	int i;
+	int j;
 		for (i = 0 ; i < n ; i++)
 		{
 			if (n > 0)
