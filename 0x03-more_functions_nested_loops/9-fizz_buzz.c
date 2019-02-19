@@ -1,34 +1,28 @@
-#include <stdio.h>
+#include "holberton.h"
+
 /**
- * more_numbers - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
+* main - entry point for the program "fizzbuzz"
+*
+* Return: 0
+*/
+
 int main(void)
 {
-	int i;
+	int n;
 
-	for (i = 1; i <= 100 ; i++)
-		if (((i % 3) == 0) && ((i % 5 == 0)))
-			printf ("FizzBuzz ");
-			else
-		if ((i % 3) == 0)
-			printf ("Fizz ");
+	for (n = 1; n <= 100; n++)
+	{
+		if (n % 3 == 0 && n % 5 == 0)
+		printf("FizzBuzz");
+		else if (n % 5 == 0)
+		printf("Buzz");
+		else if (n % 3 == 0)
+		printf("Fizz");
 		else
-			if ((i % 5) == 0)
-				printf("Buzz ");
-					else
-						if (((i % 3) != 0) && ((i % 5) != 0))
-							{
-								if (i > 9)
-									putchar ((i / 10) + '0');
-								putchar ((i % 10) + '0');
-								if (i > 0 && i < 100)
-								{
-									putchar (' ');
-								}
-
-							}
-					putchar (10);
-					return 0;
-					}
+		printf("%d", n);
+		if (n != 100)
+		printf(" ");
+	}
+	printf("\n");
+	return (0);
+}
