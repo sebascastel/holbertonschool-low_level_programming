@@ -8,24 +8,12 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int a;
-	int b;
-
-	a = _strlen(src);
-	for (b = 0; b < a; b++)
-	dest[b] = src[b];
-	return (dest);
-}
-/**
- * _strlen - returns lenght of a string..
- * @s : stringd
- * Return: Always 0.
- */
-int _strlen(char *s)
-{
 	int n = 0;
 
-	while (s[n] != '\0')
+	while (src[n] != '\0')
+	{
+	dest[n] = src[n];
 	n++;
-	return (n);
+	}
+	return (dest);
 }
