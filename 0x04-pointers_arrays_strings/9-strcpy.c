@@ -2,16 +2,16 @@
 #include <stdio.h>
 /**
  * *_strcpy - copies string pointed to by src.
- * @a : copy
- * @n : pointed
+ * @dest : copy
+ * @src : pointed
  * Return: Always 0.
  */
 char *_strcpy(char *dest, char *src)
 {
 	int a;
 	int b;
-	
-	a= _strlen (src);
+
+	a = _strlen(src);
 	for (b = 0; b < a; b++)
 	dest[b] = src[b];
 	return (dest);
