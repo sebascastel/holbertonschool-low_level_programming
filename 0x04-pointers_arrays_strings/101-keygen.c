@@ -14,8 +14,8 @@ int main(void)
         a = rand() % 128;
         while (b <= 2772 - 128)
         {
-                putchar(a);
-                b = a + b;
+        putchar(a);
+        b = a + b;
         }
         a = 2772 - b;
         putchar(a);
