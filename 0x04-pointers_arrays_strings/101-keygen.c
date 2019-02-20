@@ -11,9 +11,9 @@ int main(void)
         int b = 0;
 
         srand(time(NULL));
-        a = rand() % 128;
         while (b <= 2772 - 128)
         {
+	a = rand() % 128;
         putchar(a);
         b = a + b;
         }
