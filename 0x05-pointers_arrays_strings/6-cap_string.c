@@ -6,8 +6,9 @@
  */
 char *cap_string(char *a)
 {
-	int b, c;
-	char d[] = " \t\n,;.!?\"(){}";
+	int b;
+	int c;
+	char d[] = " ,;.!?\"(){}\t\n";
 
 	for (b = 0; a[b] != '\0'; b++)
 	{
