@@ -21,7 +21,7 @@ void print_diagsums(int *a, int size)
 	d = d + *(a + f);
 	}
 	printf("%d, ", d);
-	for (c = 0; c <= size; c++)
+	for (c =1; c <= size; c++)
 	{
 	g = (size - 1) * c;
 	e = e + *(a + g);
