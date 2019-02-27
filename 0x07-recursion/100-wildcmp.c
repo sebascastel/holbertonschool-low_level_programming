@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * is_prime_number - returns 1 if the input integer is a prime number
- *@n: int
+ * wildcmp -  compares two strings and returns 1.
+ *@s1: str1
+ *@s2: str2
  * Return: (0) always
  */
 int wildcmp(char *s1, char *s2)
@@ -18,4 +19,4 @@ int wildcmp(char *s1, char *s2)
 	return (0);
 	}
 	return (0);
-}	
+}
