@@ -1,8 +1,9 @@
 #include <stdlib.h>
-/** *argstostr - concatenates all the arguments
- *@ac: count arguments 
+/**
+ * *argstostr - concatenates all the arguments
+ *@ac: count arguments
  *@av: arguments
- *@return: 0
+ *Return: (0) always
  */
 char *argstostr(int ac, char **av)
 {
@@ -22,14 +23,14 @@ char *argstostr(int ac, char **av)
 	e++;
 	e++;
 	}
-	s = (char*)malloc(sizeof(char) * (e + 1));
+	s = (char *)malloc(sizeof(char) * (e + 1));
 	if (s == NULL)
 	return (NULL);
-	for (c = 0; c < ac; c++ , f++)
+	for (c = 0; c < ac; c++, f++)
 	{
 	for (d = 0; av[c][d]; d++, f++)
 	{
-	s[f] = av [c][d];
+	s[f] = av[c][d];
 	}
 	s[f] = '\n';
 	}
