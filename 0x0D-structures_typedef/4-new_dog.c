@@ -3,10 +3,11 @@
 #include <stdio.h>
 char *_strdup(char *str);
 /**
- **new_dog - initialize a variable of type struct dog
+ *new_dog - initialize a variable of type struct dog
  *@name: name dogo
  *@age: age dogo
  *@owner: dogo owner
+ *Return: 0
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
