@@ -3,7 +3,7 @@
  * *_realloc - function that reallocates a memory block
  *@old_size: old size
  *@new_size: new sizes
- *@*ptr: pointer to the memory previously allocated
+ *@ptr: pointer to the memory previously allocated
  *Return: (0) always
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
@@ -37,7 +37,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size > old_size)
 	{
 	for (b = 0; b < new_size; b++)
-	c[b] = *((char*)ptr + b);
+	c[b] = *((char *)ptr + b);
 	}
 	free(ptr);
 	return (c);
