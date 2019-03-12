@@ -8,20 +8,24 @@
 
 int main(void)
 {
-	int n;
+	int a;
 
-	for (n = 1; n <= 100; n++)
+	for (a = 1; a <= 100; a++)
 	{
-		if (n % 3 == 0 && n % 5 == 0)
-		printf("FizzBuzz");
-		else if (n % 5 == 0)
-		printf("Buzz");
-		else if (n % 3 == 0)
-		printf("Fizz");
-		else
-		printf("%d", n);
-		if (n != 100)
-		printf(" ");
+	if (a % 3 == 0)
+	{
+	if (a % 5 == 0)
+	printf("FizzBuzz ");
+	else
+	printf("Fizz ");
+	}
+	else if (a % 5 == 0)
+	if (a == 100)
+	printf("Buzz");
+	else
+	printf("Buzz ");
+	else
+	printf("%d ", a);
 	}
 	printf("\n");
 	return (0);
