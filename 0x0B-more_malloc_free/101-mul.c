@@ -40,16 +40,9 @@ int _atoi(char *s)
 	return (a * c);
 }
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
+ * errore - writes the character c to stdout
  * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 void errore(void)
 {
 	int a;
