@@ -1,11 +1,10 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
 * main - entry point for the program "fizzbuzz"
 *
 * Return: 0
 */
-
 int main(void)
 {
 	int a;
