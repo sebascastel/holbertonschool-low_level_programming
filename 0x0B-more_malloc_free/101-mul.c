@@ -33,7 +33,7 @@ int _atoi(char *s)
 	{
 	if (s[b] == '-')
 	c *= -1;
-	b ++;
+	b++;
 	}
 	while (s[b] != '\0' && (s[b] >= 48 && s[b] <= 57))
 	a = (a * 10) - (s[b++] - '0');
@@ -79,6 +79,6 @@ int main(int argc, char *argv[])
 	errore();
 	c = _strlen(argv[1]);
 	d = _strlen(argv[2]);
-	printf("n1: %d\nn2: %d\n", c ,d);
-	return(0);
-} 
+	printf("n1: %d\nn2: %d\n", c, d);
+	return (0);
+}
