@@ -11,12 +11,12 @@ void print_all(const char * const format, ...)
 	va_list a, char *b, int c = 0;
 
 	va_start(a, format);
-	while (format == NULL)
-	{
-	printf("\n");
-	return;
-	}
-	while (format[c] != '\0')
+
+
+
+
+	
+	while (format && format[c] != '\0')
 	{
 	switch (format[c])
 	{
