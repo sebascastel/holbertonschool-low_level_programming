@@ -15,7 +15,7 @@ printf("[%d] (nil)\n", h->len);
 else
 printf("[%d] %s\n", h->len, h->str);
 h = h->next;
-num_element++;
+a++;
 }
 return (a);
 }
