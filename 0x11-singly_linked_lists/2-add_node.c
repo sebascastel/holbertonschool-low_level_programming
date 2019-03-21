@@ -2,12 +2,12 @@
 /**
 * _strlen - returns the length of the string
 * @s: takes string
-
+*
 * Return: returns the length int
 */
-int _strlen(const char *s)
+unsigned int _strlen(const char *s)
 {
-int a;
+unsigned int a;
 
 a = 0;
 while (s[a])
