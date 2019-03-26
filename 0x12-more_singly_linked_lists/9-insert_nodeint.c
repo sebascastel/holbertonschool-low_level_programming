@@ -37,3 +37,7 @@ return (NULL);
 }
 a++;
 }
+c->next = b->next;
+b->next = c;
+return (c);
+}
