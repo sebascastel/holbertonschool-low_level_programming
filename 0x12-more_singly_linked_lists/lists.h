@@ -1,4 +1,4 @@
-ifndef DOGO
+#ifndef DOGO
 #define DOGO
 #include <stdlib.h>
 #include <string.h>
