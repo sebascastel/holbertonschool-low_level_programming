@@ -13,7 +13,7 @@ a = 0;
 while (b && b > b->next)
 {
 printf("[%p] %d\n", (void *)b, b->n);
-b = temp->next;
+b = b->next;
 a++;
 }
 if (b)
