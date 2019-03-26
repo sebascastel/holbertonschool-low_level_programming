@@ -18,8 +18,8 @@ a++;
 }
 if (b)
 {
-printf("[%p] %d\n", (void *)b, temp->n);
-printf("-> [%p] %d\n", (void *)b->next, temp->next->n);
+printf("[%p] %d\n", (void *)b, b->n);
+printf("-> [%p] %d\n", (void *)b->next, b->next->n);
 a++;
 }
 return (a);
