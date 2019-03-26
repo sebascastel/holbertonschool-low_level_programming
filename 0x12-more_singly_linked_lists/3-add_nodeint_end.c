@@ -20,7 +20,7 @@ if (*head == NULL)
 return (*head);
 }
 while (b->next)
-b = (prev)->next;
+b = (b)->next;
 b->next = a;
 return (a);
 }
