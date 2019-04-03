@@ -189,7 +189,7 @@ printf("\n");
 * entry - entry
 * @h: header
 */
-void print_entry(Elf64_Ehdr h)
+void entry(Elf64_Ehdr h)
 {
 int a = 0;
 int b = 0;
