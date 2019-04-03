@@ -111,7 +111,7 @@ case ELFOSABI_TRU64:
 printf("UNIX - TRU64");
 break;
 default:
-print_osabi_more(h);
+osabi_2(h);
 break;
 }
 printf("\n");
@@ -145,7 +145,7 @@ break;
 * abiversion - ABI version
 * @h: header
 */
-void print_abiversion(Elf64_Ehdr h)
+void abiversion(Elf64_Ehdr h)
 {
 printf(" ABI Version: %d\n",
 h.e_ident[EI_ABIVERSION]);
@@ -162,7 +162,7 @@ int b = 0;
 printf(" Type: ");
 if (h.e_ident[EI_DATA] == ELFDATA2MSB)
 b = 1;
-switch (p[b])
+switch (a[b])
 {
 case ET_NONE:
 printf("NONE (None)");
@@ -198,7 +198,7 @@ unsigned char *c = (unsigned char *)&h.e_entry;
 printf(" Entry point address: 0x");
 if (h.e_ident[EI_DATA] != ELFDATA2MSB)
 {
-i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
+a = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
 while (!c[a])
 a--;
 printf("%x", c[a--]);
@@ -234,12 +234,12 @@ if (argc != 2)
 dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
 a = open(argv[1], O_RDONLY);
 if (a == -1)
-dprintf(STDERR_FILENO, "Can't open file: %s\n", arvg[1]), exit(98);
-c = read(a, &h, sizeof(b));
+dprintf(STDERR_FILENO, "Can't open file: %s\n", argv[1]), exit(98);
+c = read(a, &b, sizeof(b));
 if (c < 1 || c != sizeof(b))
 dprintf(STDERR_FILENO, "Can't read from file: %s\n", argv[1]), exit(98);
-if (h.e_ident[0] == 0x7f && h.e_ident[1] == 'E' && h.e_ident[2] == 'L' &&
-h.e_ident[3] == 'F')
+if (b.e_ident[0] == 0x7f && b.e_ident[1] == 'E' && b.e_ident[2] == 'L' &&
+b.e_ident[3] == 'F')
 {
 printf("ELF Header:\n");
 }
@@ -254,6 +254,6 @@ abiversion(b);
 type(b);
 entry(b);
 if (close(a))
-dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd), exit(98);
+dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", a), exit(98);
 return (EXIT_SUCCESS);
 }
