@@ -9,7 +9,7 @@ void magic(Elf64_Ehdr h)
 {
 int a;
 
-printf(" Magic: ");
+printf("  Magic:   ");
 for (a = 0; a < EI_NIDENT; a++)
 printf("%2.2x%s", h.e_ident[a], a == EI_NIDENT - 1 ? "\n" : " ");
 }
@@ -19,7 +19,7 @@ printf("%2.2x%s", h.e_ident[a], a == EI_NIDENT - 1 ? "\n" : " ");
 */
 void class(Elf64_Ehdr h)
 {
-printf(" Class: ");
+printf("  Class:                             ");
 switch (h.e_ident[EI_CLASS])
 {
 case ELFCLASS64:
@@ -40,7 +40,7 @@ printf("\n");
 */
 void data(Elf64_Ehdr h)
 {
-printf(" Data: ");
+printf("  Data:                              ");
 switch (h.e_ident[EI_DATA])
 {
 case ELFDATA2MSB:
@@ -61,7 +61,7 @@ printf("\n");
 */
 void version(Elf64_Ehdr h)
 {
-printf(" Version: %d", h.e_ident[EI_VERSION]);
+printf("  Version:                           %d", h.e_ident[EI_VERSION]);
 switch (h.e_ident[EI_VERSION])
 {
 case EV_CURRENT:
@@ -80,7 +80,7 @@ printf("\n");
 */
 void osabi(Elf64_Ehdr h)
 {
-printf(" OS/ABI: ");
+printf("  OS/ABI:                            ");
 switch (h.e_ident[EI_OSABI])
 {
 case ELFOSABI_NONE:
@@ -147,8 +147,8 @@ break;
 */
 void abiversion(Elf64_Ehdr h)
 {
-printf(" ABI Version: %d\n",
-h.e_ident[EI_ABIVERSION]);
+printf("  ABI Version:                       %d\n",
+		h.e_ident[EI_ABIVERSION]);
 }
 /**
 * type - type
@@ -159,7 +159,7 @@ void type(Elf64_Ehdr h)
 char *a = (char *)&h.e_type;
 int b = 0;
 
-printf(" Type: ");
+printf("  Type:                              ");
 if (h.e_ident[EI_DATA] == ELFDATA2MSB)
 b = 1;
 switch (a[b])
