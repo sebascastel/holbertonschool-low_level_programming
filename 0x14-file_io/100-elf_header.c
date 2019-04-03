@@ -234,7 +234,7 @@ if (argc != 2)
 dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n"), exit(98);
 a = open(argv[1], O_RDONLY);
 if (a == -1)
-dprintf(STDERR_FILENO, "Can't open file: %s\n", av[1]), exit(98);
+dprintf(STDERR_FILENO, "Can't open file: %s\n", arvg[1]), exit(98);
 c = read(a, &h, sizeof(b));
 if (c < 1 || c != sizeof(b))
 dprintf(STDERR_FILENO, "Can't read from file: %s\n", argv[1]), exit(98);
